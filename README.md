@@ -30,4 +30,4 @@ If you have any questions about the repo, open an issue or contact [javantie](ht
 
 # Screen Shot:
 
-![App Image](https://github.com/javantie/Budget-App/blob/main/public/img/Capture.PNG)
+![App Image](https://github.com/javantie/Book-Search-Engine/blob/feature/tutor/client/public/assets/images/screenshot.PNG)
