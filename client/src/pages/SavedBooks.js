@@ -18,11 +18,7 @@ const SavedBooks = () => {
   const {loading, data} = useQuery(GET_ME)
   const userData = data?.userData || []
   //added the remove book mutation
-  const [removeBook] = useMutation(REMOVE_BOOK)
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  const [dropBoook] = useMutation(REMOVE_BOOK)
 
   // use this to determine if `useEffect()` hook needs to run again
   // const userDataLength = Object.keys(userData).length;
@@ -61,7 +57,7 @@ const SavedBooks = () => {
     }
 
     try {
-      const response = await removeBook(bookId, token);
+      const response = await dropBoook(bookId, token);
 
       if (!response.ok) {
         throw new Error('something went wrong!');
@@ -77,7 +73,7 @@ const SavedBooks = () => {
   };
 
   // if data isn't here yet, say so
-  if (!userDataLength) {
+  if (loading) {
     return <h2>LOADING...</h2>;
   }
 
