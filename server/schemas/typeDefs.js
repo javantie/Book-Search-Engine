@@ -27,12 +27,12 @@ const typeDefs = gql`
   }
 
   input BookInput {
-    authors: [String]
-    description: String
     bookId: String
+    authors: [String]
+    title: String
+    description: String
     image: String
     link: String
-    title: String
   }
   
   type Mutation {
